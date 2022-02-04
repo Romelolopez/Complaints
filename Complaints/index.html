@@ -10,6 +10,10 @@
     <title>Complaints!</title>
 </head>
 <body>
+    <div class="title">
+        <h1>NYC</h1>
+        <h4>Department of complaints</h4>
+    </div>   
     <div class=header>
         <input type="text" max="2" placeholder="Number of complaints" class="input" id="input">
         <button class=button onclick="getData(this.value)" value="MANHATTAN">Manhattan</button>
@@ -17,6 +21,22 @@
         <button class=button onclick="getData(this.value)" value="BROOKLYN">Brooklyn</button>
         <button class=button onclick="getData(this.value)" value="QUEENS">Queens</button>
         <button class=button onclick="getData(this.value)" value="STATEN ISLAND">Staten Island</button>
+    </div>
+    <div class="dropdown">
+        <div class="input-box">
+            <input type="text" max="2" placeholder="Number of complaints" class="input" id="input">
+        </div>
+        <div>
+            <label for="boroughs">Choose a borough:</label>
+            <select id="boroughs" class="">
+                <option value="MANHATTAN">Manhattan</option>
+                <option value="BRONX">Bronx</option>
+                <option value="BROOKLYN">Brooklyn</option>
+                <option value="QUEENS">Queens</option>
+                <option value="STATEN ISLAND">Staten Island</option>
+            </select>
+            <button class=button-sm onclick="getOption()">submit</button>
+        </div>
     </div>
     <div id=results> </div>
     

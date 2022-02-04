@@ -22,14 +22,12 @@ async function getData(borough) {
             //Add this to the output variable
             output += `
             <div class="menu">
-            <h3>${post.descriptor}</h3>
-            <div>
-            <details>
-                <summary class="dets">Description</summary>
-                ${post.resolution_description}
-            </details>
-            </div>
-            
+                <div class="maybe">
+                    <details>
+                        <summary>${post.descriptor}</summary>
+                        <p class="content">${post.resolution_description}</p>
+                    </details>
+                </div>
             </div>
             `
         });
@@ -38,6 +36,10 @@ async function getData(borough) {
         document.getElementById("results").innerHTML = output
     })
     return response  
+}
+
+function getOption() {
+    getData(document.getElementById('boroughs').value);
 }
 
 

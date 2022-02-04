@@ -1,24 +1,44 @@
 body, html {
     width: 100%;
     height: 100%;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+h1{
+    font-family: Impact;
+    letter-spacing: 10px;
+    color: orange;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    margin-bottom: -25px;
+}
 
 .input {
     box-sizing: border-box;
-    height: 50px;
+    height: 3.125em;
 }
 
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .button {
-    height: 50px;
-    width: 100px;
-    margin: 10px;
+    height: 3.125em;
+    width: 6.250em;
+    margin: 0.625em;
     background-color: blue;
     color: white;
     text-align: center;
@@ -38,15 +58,91 @@ body, html {
     display: none;
 }
 
-.menu{
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    align-items: center;
-}
+summary {
+    border: 4px solid transparent;
+    outline: none;
+    padding: 1rem;
+    display: block;
+    background: #444;
+    color: white;
+    padding-left: 2.2rem;
+    position: relative;
+    cursor: pointer;
+    width: 200px;
+  }
+  details {
+    margin-top: 5px;
+    background: white;
+  }
+  details summary::-webkit-details-marker {
+    display:none;
+  }
+  details[open] > summary:before {
+    transform: rotate(90deg);
+  }
+  summary:before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+  }
+  
+  .content {
+    width: 200px;
+    border-top: none;
+    padding: 10px;
+    
+    border-top: none;
+    
+  }
+  
+  p {
+    margin: 0;
+    padding-bottom: 10px;
+    
+  }
 
-#results {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+  .dropdown{
+    display: none;
+  }
+
+  @media only screen and (max-width: 550px) {
+    .dropdown{
+      display: block;
+    }
+    .header{
+      display: none;
+    }
+    .input-box{
+      display: flex;
+      justify-content: center;
+    }
+    .input {
+      box-sizing: border-box;
+      height: 2em;
+    }
+    
+    .button-sm {
+      /* height: 3.125em;
+      width: 6.250em; */
+      margin: 0.625em;
+      background-color: blue;
+      color: white;
+      text-align: center;
+      border: 2px solid black;
+      border-radius: 5px;
+    }
+
+	label{
+	  font-family: Impact;
+    color: orange;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: black;
+	}
 }
