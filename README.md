@@ -1,11 +1,10 @@
 
 # Complaints
 <div align="center">
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-  
-  <div>
+  <img src="https://live.staticflickr.com/65535/51908772544_d410e96278.jpg" width="500" height="317" alt="Add Game Component">
+  <p>
     search through the 311 call data provided by the NYC Open Data API, and display all the complaints made to the NYPD, filtered by borough. Also see how the          police responded to the complaint
-  </div>
+  </p>
 </div>
 
 ## API
